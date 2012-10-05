@@ -1,12 +1,10 @@
-WSH JSLint/JSHint Runner
+Use JSHint in EditPlus
 =================
-
-A Windows Scripting Host runner for [JSLint][1] and [JSHint][2].
-
-How to use JSHint with [EditPlus][5]?
 -----------------
+_It was forked from [slieschke/wsh-jslint-runner][9] and I did some changes as my habit._
 
-Configure JSHint as an [EditPlus][5] user tool with the following steps:
+Configure [JSHint][2] in [EditPlus][5] with the following steps:
+--------------------
 * Create a sub directory named `JSHint` in Editplus application directory.
 * Download and extract all these files to the `JSHint` directory.
 * EditPlus Menu > Tools > Configure User Tools > Add Tool > Program
@@ -37,3 +35,4 @@ the latest version of [`jshint.js`][4].
 [6]: http://www.jslint.com/lint.html#options
 [7]: http://www.jshint.com/docs/
 [8]: https://github.com/douglascrockford/JSON-js/raw/master/json_parse_state.js
+[9]: https://github.com/slieschke/wsh-jslint-runner
