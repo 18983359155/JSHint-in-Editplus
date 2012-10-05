@@ -3,6 +3,9 @@ Use JSHint in EditPlus
 -----------------
 _It was forked from [slieschke/wsh-jslint-runner][9] and I did some changes as my habit._
 
+![Screen Shot](https://github.com/cuixiping/JSHint-in-Editplus/raw/master/configure-jshint-in-editplus.png)
+
+
 Configure [JSHint][2] in [EditPlus][5] with the following steps:
 --------------------
 * Create a sub directory named `JSHint` in Editplus application directory.
