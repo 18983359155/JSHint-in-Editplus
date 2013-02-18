@@ -21,7 +21,26 @@
 		exit('File "' + filename + '" not found.');
 	}
 	WScript.StdOut.WriteLine(filename +'\n');
-	if (!tool(fso.OpenTextFile(filename, 1, false, -2).ReadAll(), options)) {
+
+	//read utf-8 text file.  by cuixiping 2013-02-19.
+	function ReadUTF8TextFile(filepath){
+		var stm = new ActiveXObject("ADODB.Stream");
+		stm.Type = 2;
+		stm.Mode = 3;
+		stm.Charset = "utf-8";
+		stm.Open();
+		stm.LoadFromFile(filepath);
+		var s = '';
+		if(!stm.EOS){
+			s = stm.ReadText();
+		}
+		stm.Close();
+		stm = null;
+		return s;
+	}
+
+	//if (!tool(fso.OpenTextFile(filename, 1, false, -2).ReadAll(), options)) {
+	if (!tool(ReadUTF8TextFile(filename), options)) {
 		for (i = 0; i < tool.errors.length; i = i + 1) {
 			e = tool.errors[i];
 			if (e) {
